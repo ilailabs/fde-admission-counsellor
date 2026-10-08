@@ -1,0 +1,131 @@
+```html
+<!-- Replace the contact details below with your preferred email,
+     phone number and LinkedIn URL. -->
+
+<section class="cta">
+  <h2>Let's Connect</h2>
+
+  <p>
+    Available for immediate engagement in FDE admission counselling,
+    technology mentoring, career guidance, technical assessment and
+    student success.
+  </p>
+
+  <div class="contact-buttons">
+
+    <a href="mailto:YOUR_EMAIL@example.com" class="contact-btn primary">
+      ✉ Contact Me
+    </a>
+
+    <a href="tel:+91XXXXXXXXXX" class="contact-btn secondary">
+      ☎ Call Me
+    </a>
+
+    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" 
+       class="contact-btn secondary"
+       target="_blank">
+      LinkedIn
+    </a>
+
+  </div>
+
+  <div class="availability-note">
+    <span>●</span> Ready to Join Immediately
+    &nbsp; • &nbsp; Full-Time
+    &nbsp; • &nbsp; Part-Time
+    &nbsp; • &nbsp; Contract
+  </div>
+</section>
+
+<style>
+  .cta {
+    margin-top: 45px;
+    background: linear-gradient(135deg, #eef6ff, #f8fbff);
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+    padding: 35px 25px;
+    text-align: center;
+  }
+
+  .cta h2 {
+    color: #0b5cab;
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .cta p {
+    max-width: 680px;
+    margin: 0 auto 25px;
+    color: #475569;
+    font-size: 16px;
+  }
+
+  .contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 145px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.2s ease;
+  }
+
+  .contact-btn.primary {
+    background: #0b5cab;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(11, 92, 171, 0.25);
+  }
+
+  .contact-btn.primary:hover {
+    background: #083f78;
+    transform: translateY(-2px);
+  }
+
+  .contact-btn.secondary {
+    background: #ffffff;
+    color: #0b5cab;
+    border: 1px solid #93c5fd;
+  }
+
+  .contact-btn.secondary:hover {
+    background: #eaf4ff;
+    transform: translateY(-2px);
+  }
+
+  .availability-note {
+    font-size: 13px;
+    color: #475569;
+    font-weight: 600;
+  }
+
+  .availability-note span {
+    color: #16a34a;
+  }
+
+  @media (max-width: 600px) {
+    .contact-buttons {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .contact-btn {
+      width: 100%;
+    }
+
+    .availability-note {
+      line-height: 2;
+    }
+  }
+</style>
+```
