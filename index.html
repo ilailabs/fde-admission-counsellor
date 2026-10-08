@@ -1,131 +1,687 @@
-```html
-<!-- Replace the contact details below with your preferred email,
-     phone number and LinkedIn URL. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<section class="cta">
-  <h2>Let's Connect</h2>
+  <title>FDE Admission Counsellor | Elankovan Gopal</title>
 
-  <p>
-    Available for immediate engagement in FDE admission counselling,
-    technology mentoring, career guidance, technical assessment and
-    student success.
-  </p>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <div class="contact-buttons">
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      background: #f4f8fc;
+      color: #1e293b;
+      line-height: 1.7;
+    }
 
-    <a href="mailto:YOUR_EMAIL@example.com" class="contact-btn primary">
-      ✉ Contact Me
-    </a>
+    .profile {
+      max-width: 1000px;
+      margin: 50px auto;
+      background: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 15px 45px rgba(15, 76, 129, 0.12);
+    }
 
-    <a href="tel:+91XXXXXXXXXX" class="contact-btn secondary">
-      ☎ Call Me
-    </a>
+    /* =========================
+       HEADER
+    ========================= */
 
-    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" 
-       class="contact-btn secondary"
-       target="_blank">
-      LinkedIn
-    </a>
+    .header {
+      background: linear-gradient(135deg, #0b3d91, #1677d2);
+      color: white;
+      padding: 55px 60px;
+      position: relative;
+      overflow: hidden;
+    }
 
-  </div>
+    .header::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      right: 40px;
+      top: -80px;
+    }
 
-  <div class="availability-note">
-    <span>●</span> Ready to Join Immediately
-    &nbsp; • &nbsp; Full-Time
-    &nbsp; • &nbsp; Part-Time
-    &nbsp; • &nbsp; Contract
-  </div>
-</section>
+    .eyebrow {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 2;
+    }
 
-<style>
-  .cta {
-    margin-top: 45px;
-    background: linear-gradient(135deg, #eef6ff, #f8fbff);
-    border: 1px solid #bfdbfe;
-    border-radius: 16px;
-    padding: 35px 25px;
-    text-align: center;
-  }
+    .header h1 {
+      font-size: 42px;
+      line-height: 1.15;
+      margin-bottom: 22px;
+      position: relative;
+      z-index: 2;
+    }
 
-  .cta h2 {
-    color: #0b5cab;
-    font-size: 26px;
-    margin-bottom: 10px;
-  }
+    .availability {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      position: relative;
+      z-index: 2;
+    }
 
-  .cta p {
-    max-width: 680px;
-    margin: 0 auto 25px;
-    color: #475569;
-    font-size: 16px;
-  }
+    .chip {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: white;
+      padding: 7px 15px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      backdrop-filter: blur(5px);
+    }
 
-  .contact-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 22px;
-  }
+    .chip.ready {
+      background: #ffffff;
+      color: #0b5cab;
+    }
 
-  .contact-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 145px;
-    padding: 12px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 15px;
-    transition: all 0.2s ease;
-  }
+    /* =========================
+       CONTENT
+    ========================= */
 
-  .contact-btn.primary {
-    background: #0b5cab;
-    color: #ffffff;
-    box-shadow: 0 5px 15px rgba(11, 92, 171, 0.25);
-  }
+    .content {
+      padding: 50px 60px;
+    }
 
-  .contact-btn.primary:hover {
-    background: #083f78;
-    transform: translateY(-2px);
-  }
+    .section {
+      margin-bottom: 42px;
+    }
 
-  .contact-btn.secondary {
-    background: #ffffff;
-    color: #0b5cab;
-    border: 1px solid #93c5fd;
-  }
+    .section h2 {
+      color: #0b5cab;
+      font-size: 22px;
+      margin-bottom: 15px;
+      padding-left: 14px;
+      border-left: 4px solid #1677d2;
+    }
 
-  .contact-btn.secondary:hover {
-    background: #eaf4ff;
-    transform: translateY(-2px);
-  }
+    .section p {
+      color: #475569;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
 
-  .availability-note {
-    font-size: 13px;
-    color: #475569;
-    font-weight: 600;
-  }
+    /* =========================
+       EXPERTISE
+    ========================= */
 
-  .availability-note span {
-    color: #16a34a;
-  }
+    .expertise {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
 
-  @media (max-width: 600px) {
+    .expertise-card {
+      background: #f5f9fe;
+      border: 1px solid #dbeafe;
+      padding: 18px;
+      border-radius: 12px;
+      color: #164e8c;
+      font-weight: 600;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .expertise-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(15, 76, 129, 0.08);
+    }
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .experience {
+      border-left: 2px solid #bfdbfe;
+      padding-left: 25px;
+    }
+
+    .experience-item {
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    .experience-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .experience-item::before {
+      content: "";
+      width: 11px;
+      height: 11px;
+      background: #1677d2;
+      border-radius: 50%;
+      position: absolute;
+      left: -32px;
+      top: 8px;
+    }
+
+    .experience-item h3 {
+      color: #164e8c;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .experience-item p {
+      margin-bottom: 5px;
+    }
+
+    /* =========================
+       EDUCATION
+    ========================= */
+
+    .education {
+      background: linear-gradient(135deg, #f1f7ff, #f8fbff);
+      border: 1px solid #dbeafe;
+      padding: 25px;
+      border-radius: 14px;
+    }
+
+    .education strong {
+      color: #0b5cab;
+    }
+
+    /* =========================
+       CONTACT CTA
+    ========================= */
+
+    .cta {
+      margin-top: 45px;
+      background: linear-gradient(135deg, #eef6ff, #f8fbff);
+      border: 1px solid #bfdbfe;
+      border-radius: 16px;
+      padding: 35px 25px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      color: #0b5cab;
+      border: none;
+      padding: 0;
+      margin-bottom: 10px;
+      font-size: 26px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 24px;
+      color: #475569;
+    }
+
     .contact-buttons {
-      flex-direction: column;
-      align-items: stretch;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
     }
 
     .contact-btn {
-      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 170px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      transition: all 0.2s ease;
+    }
+
+    .contact-btn.primary {
+      background: #0b5cab;
+      color: #ffffff;
+      box-shadow: 0 5px 15px rgba(11, 92, 171, 0.25);
+    }
+
+    .contact-btn.primary:hover {
+      background: #083f78;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(11, 92, 171, 0.3);
+    }
+
+    .contact-btn.secondary {
+      background: #ffffff;
+      color: #0b5cab;
+      border: 1px solid #93c5fd;
+    }
+
+    .contact-btn.secondary:hover {
+      background: #eaf4ff;
+      transform: translateY(-2px);
+    }
+
+    .email-address {
+      color: #0b5cab;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 5px;
     }
 
     .availability-note {
-      line-height: 2;
+      font-size: 13px;
+      color: #475569;
+      font-weight: 600;
+      margin-top: 15px;
     }
-  }
-</style>
-```
+
+    .availability-note span {
+      color: #16a34a;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+      background: #0b3d91;
+      color: rgba(255, 255, 255, 0.8);
+      padding: 20px 60px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      .profile {
+        margin: 15px;
+        border-radius: 14px;
+      }
+
+      .header,
+      .content {
+        padding: 35px 25px;
+      }
+
+      .header h1 {
+        font-size: 32px;
+      }
+
+      .expertise {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .contact-btn {
+        width: 100%;
+      }
+
+      .availability-note {
+        line-height: 2;
+      }
+
+      .footer {
+        padding: 20px 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="profile">
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+      <div class="eyebrow">
+        Technology • Career • Admissions
+      </div>
+
+      <h1>
+        FDE Admission Counsellor
+      </h1>
+
+      <div class="availability">
+        <span class="chip ready">
+          ● Ready to Join Immediately
+        </span>
+
+        <span class="chip">
+          Full-Time
+        </span>
+
+        <span class="chip">
+          Part-Time
+        </span>
+
+        <span class="chip">
+          Contract Basis
+        </span>
+      </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="content">
+
+
+      <!-- PROFESSIONAL PROFILE -->
+
+      <section class="section">
+
+        <h2>
+          Professional Profile
+        </h2>
+
+        <p>
+          IIT Madras alumnus, technology consultant, educator and engineering
+          professional with 7+ years of experience across technology,
+          research, product development, teaching and career mentoring.
+        </p>
+
+        <p>
+          Experienced in helping students and professionals understand
+          technology careers, evaluate learning pathways and develop the
+          technical, analytical and problem-solving skills required for
+          modern engineering roles.
+        </p>
+
+        <p>
+          Brings a combination of academic research, industry experience,
+          startup exposure and hands-on software development to guide
+          candidates interested in Forward Deployed Engineering,
+          AI, software engineering and technology consulting careers.
+        </p>
+
+      </section>
+
+
+      <!-- FDE ADMISSION COUNSELLING -->
+
+      <section class="section">
+
+        <h2>
+          FDE Admission Counselling
+        </h2>
+
+        <p>
+          Supports candidates aspiring to enter Forward Deployed Engineer
+          and technology-focused career programs through structured
+          counselling and practical career guidance.
+        </p>
+
+        <div class="expertise">
+
+          <div class="expertise-card">
+            FDE Career Guidance
+          </div>
+
+          <div class="expertise-card">
+            Technical Profile Evaluation
+          </div>
+
+          <div class="expertise-card">
+            Admission Counselling
+          </div>
+
+          <div class="expertise-card">
+            Technical Interview Preparation
+          </div>
+
+          <div class="expertise-card">
+            Resume & Portfolio Guidance
+          </div>
+
+          <div class="expertise-card">
+            AI & Software Career Paths
+          </div>
+
+          <div class="expertise-card">
+            Project & Skill Assessment
+          </div>
+
+          <div class="expertise-card">
+            Engineering Problem Solving
+          </div>
+
+          <div class="expertise-card">
+            Career Transition Guidance
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- RELEVANT EXPERIENCE -->
+
+      <section class="section">
+
+        <h2>
+          Relevant Experience
+        </h2>
+
+        <div class="experience">
+
+          <div class="experience-item">
+
+            <h3>
+              Technology Consultant & Product Developer
+            </h3>
+
+            <p>
+              Worked with startups and enterprises to understand business
+              requirements, design technology solutions and deliver
+              production-ready software applications.
+            </p>
+
+          </div>
+
+
+          <div class="experience-item">
+
+            <h3>
+              Ex-Founder & Technology Entrepreneur
+            </h3>
+
+            <p>
+              Led technology initiatives involving product development,
+              engineering strategy, client requirements, software delivery
+              and technology consulting.
+            </p>
+
+          </div>
+
+
+          <div class="experience-item">
+
+            <h3>
+              AI / Technology Research & Engineering
+            </h3>
+
+            <p>
+              Experience across AI research, software engineering,
+              computational research, Python-based technical work and
+              emerging technology exploration.
+            </p>
+
+          </div>
+
+
+          <div class="experience-item">
+
+            <h3>
+              Educator & Career Mentor
+            </h3>
+
+            <p>
+              7+ years of teaching and mentoring experience across
+              Mathematics, Physics, Engineering Mathematics, competitive
+              examinations and technology-oriented learning.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ACADEMIC BACKGROUND -->
+
+      <section class="section">
+
+        <h2>
+          Academic Background
+        </h2>
+
+        <div class="education">
+
+          <p>
+            <strong>
+              M.S. (Research) – IIT Madras
+            </strong>
+            <br>
+            Computational Materials Science
+          </p>
+
+          <p>
+            Research experience involving computational modelling,
+            scientific computing, mathematics, Python and
+            high-performance computing.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- CORE STRENGTHS -->
+
+      <section class="section">
+
+        <h2>
+          Core Strengths
+        </h2>
+
+        <div class="expertise">
+
+          <div class="expertise-card">
+            Technology & Engineering
+          </div>
+
+          <div class="expertise-card">
+            AI / ML
+          </div>
+
+          <div class="expertise-card">
+            Software Development
+          </div>
+
+          <div class="expertise-card">
+            Mathematics & Problem Solving
+          </div>
+
+          <div class="expertise-card">
+            Student Mentoring
+          </div>
+
+          <div class="expertise-card">
+            Career Counselling
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           CONTACT CTA
+      ========================== -->
+
+      <section class="cta">
+
+        <h2>
+          Let's Connect
+        </h2>
+
+        <p>
+          Available for immediate engagement in FDE admission counselling,
+          technology mentoring, career guidance, technical assessment
+          and student success.
+        </p>
+
+        <div class="contact-buttons">
+
+          <a
+            href="mailto:elankovanmg@gmail.com?subject=FDE%20Admission%20Counsellor%20Opportunity"
+            class="contact-btn primary"
+          >
+            ✉ Contact Me
+          </a>
+
+        </div>
+
+        <div class="email-address">
+          elankovanmg@gmail.com
+        </div>
+
+        <div class="availability-note">
+          <span>●</span>
+          Ready to Join Immediately
+          &nbsp; • &nbsp;
+          Full-Time
+          &nbsp; • &nbsp;
+          Part-Time
+          &nbsp; • &nbsp;
+          Contract
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+      FDE Admission Counsellor
+      &nbsp; • &nbsp;
+      Technology Mentor
+      &nbsp; • &nbsp;
+      IIT Madras Alumnus
+    </footer>
+
+  </div>
+
+</body>
+</html>
